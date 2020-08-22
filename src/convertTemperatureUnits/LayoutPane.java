@@ -24,6 +24,7 @@ public class LayoutPane
     private BorderPane paneForBottom = new BorderPane();
     private BorderPane paneForLayout = new BorderPane();
     private String[] units = {"Celsius (°C)","Fahrenheit (°F)", "Kelvin (K)","Rankine (°R)"};
+    private Converter converter = new Converter();
 
     public BorderPane getPaneForLayout()
     {
@@ -97,6 +98,26 @@ public class LayoutPane
         paneForLayout.setTop(paneForHeader);
         paneForLayout.setCenter(paneForInnerContent);
         paneForLayout.setBottom(paneForBottom);
+
+        btnForConvert.setOnAction(e -> {
+            double unit = Double.parseDouble(textFieldForValue.getText());
+            String conFrom = cboForConvertFrom.getValue();
+            String conTo = cboForConvertTo.getValue();
+            switch (conFrom)
+            {
+                case "Celsius (°C)": result.setText("Result :"+converter.celsiusConversion(conTo,unit));
+                break;
+                case "Fahrenheit (°F)": result.setText("Result "+converter.fahrenheitConversion(conTo,unit));
+                break;
+                case "Kelvin (K)": result.setText("Result "+converter.kelvinConversion(conTo,unit));
+                break;
+                case "Rankine (°R)": result.setText("Result "+converter.rankineConversion(conTo,unit));
+                break;
+                default: throw new IllegalStateException("Unexpected value: " + convertTo);
+            }
+        });
+
+        btnForClear.setOnAction(e -> result.setText("Result: "));
 
         return paneForLayout;
     }
