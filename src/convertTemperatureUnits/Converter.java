@@ -1,6 +1,10 @@
 package convertTemperatureUnits;
 
-public class Converter {
+import java.text.DecimalFormat;
+
+public class Converter
+{
+    private DecimalFormat decimalFormat = new DecimalFormat("#####.###");
     public String celsiusConversion(String convertTo, double unit)
     {
         String result;
@@ -8,16 +12,16 @@ public class Converter {
         switch(convertTo)
         {
             case "Celsius (°C)": convertedUnit = unit;
-            result = unit+" °C = "+convertedUnit+" °C";
+            result = decimalFormat.format(unit) + " °C = " + decimalFormat.format(convertedUnit) + " °C";
             break;
             case "Fahrenheit (°F)": convertedUnit = unit*9/5+32;
-            result = unit+" °C = "+convertedUnit+" °F";
+            result = decimalFormat.format(unit) + " °C = " + decimalFormat.format(convertedUnit) + " °F";
             break;
             case "Kelvin (K)": convertedUnit = unit+273.15;
-            result = unit+" °C = "+convertedUnit+" k";
+            result = decimalFormat.format(unit) + " °C = " + decimalFormat.format(convertedUnit) + " k";
             break;
             case "Rankine (°R)": convertedUnit = unit*9/5+491.67;
-            result = unit+" °C = "+convertedUnit+" °R";
+            result = decimalFormat.format(unit) + " °C = " + decimalFormat.format(convertedUnit) + " °R";
             break;
             default:
                 throw new IllegalStateException("Unexpected value: " + convertTo);
@@ -32,16 +36,16 @@ public class Converter {
         switch(convertTo)
         {
             case "Celsius (°C)": convertedUnit = (unit-32)*5/9;
-                result = unit+" °F = "+convertedUnit+" °C";
+                result = decimalFormat.format(unit) + " °F = " + decimalFormat.format(convertedUnit) + " °C";
                 break;
             case "Fahrenheit (°F)": convertedUnit = unit;
-                result = unit+" °F = "+convertedUnit+" °F";
+                result = decimalFormat.format(unit) + " °F = " + decimalFormat.format(convertedUnit) + " °F";
                 break;
             case "Kelvin (K)": convertedUnit = (unit+459.67)*5/9;
-                result = unit+" °F = "+convertedUnit+" k";
+                result = decimalFormat.format(unit) + " °F = " + decimalFormat.format(convertedUnit) + " k";
                 break;
             case "Rankine (°R)": convertedUnit = unit+459.67;
-                result = unit+" °F = "+convertedUnit+" °R";
+                result = decimalFormat.format(unit) + " °F = " + decimalFormat.format(convertedUnit) + " °R";
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + convertTo);
@@ -56,16 +60,16 @@ public class Converter {
         switch(convertTo)
         {
             case "Celsius (°C)": convertedUnit = unit-273.15;
-                result = unit+" K = "+convertedUnit+" °C";
+                result = decimalFormat.format(unit) + " K = " + decimalFormat.format(convertedUnit) +" °C";
                 break;
             case "Fahrenheit (°F)": convertedUnit = unit*9/5-459.67;
-                result = unit+" K = "+convertedUnit+" °F";
+                result = decimalFormat.format(unit) + " K = "+ decimalFormat.format(convertedUnit) +" °F";
                 break;
             case "Kelvin (K)": convertedUnit = unit;
-                result = unit+" K = "+convertedUnit+" k";
+                result = decimalFormat.format(unit) + " K = "+ decimalFormat.format(convertedUnit) + " k";
                 break;
             case "Rankine (°R)": convertedUnit = unit*9/5;
-                result = unit+" K = "+convertedUnit+" °R";
+                result = decimalFormat.format(unit) + " K = "+ decimalFormat.format(convertedUnit) + " °R";
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + convertTo);
@@ -79,19 +83,19 @@ public class Converter {
         switch (convertTo) {
             case "Celsius (°C)":
                 convertedUnit = unit * 5 / 9 - 273.15;
-                result = unit + " °R = " + convertedUnit + " °C";
+                result = decimalFormat.format(unit) + " °R = " + decimalFormat.format(convertedUnit) + " °C";
                 break;
             case "Fahrenheit (°F)":
                 convertedUnit = unit - 459.67;
-                result = unit + " °R = " + convertedUnit + " °F";
+                result = decimalFormat.format(unit) + " °R = " + decimalFormat.format(convertedUnit) + " °F";
                 break;
             case "Kelvin (K)":
                 convertedUnit = unit * 5 / 9;
-                result = unit + " °R = " + convertedUnit + " k";
+                result = decimalFormat.format(unit) + " °R = " + decimalFormat.format(convertedUnit) + " k";
                 break;
             case "Rankine (°R)":
                 convertedUnit = unit;
-                result = unit + " °R = " + convertedUnit + " °R";
+                result = decimalFormat.format(unit) + " °R = " + decimalFormat.format(convertedUnit) + " °R";
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + convertTo);
