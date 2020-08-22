@@ -24,13 +24,13 @@ public class LayoutPane
     private BorderPane paneForBottom = new BorderPane();
     private BorderPane paneForLayout = new BorderPane();
     private String[] units = {"Celsius (°C)","Fahrenheit (°F)", "Kelvin (K)","Rankine (°R)"};
-    private Converter converter = new Converter();
+    private Converter converter = Converter.getInstance();
 
     public BorderPane getPaneForLayout()
     {
-        Text heading = new Text("Temperature Conversion");
+        Text heading = new Text("Temperature Conversion Calculator");
         heading.setFill(Color.WHITE);
-        heading.setFont(Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR,25));
+        heading.setFont(Font.font("Verdana", FontWeight.BOLD, FontPosture.REGULAR,18));
 
         Rectangle backgroundForHeading = new Rectangle();
         backgroundForHeading.setX(10);
@@ -45,11 +45,11 @@ public class LayoutPane
         paneForHeader.setPadding(new Insets(10,0,0,0));
 
         Label value = new Label("Enter a value");
-        value.setFont(Font.font("Helvetica",16));
+        value.setFont(Font.font("Helvetica",15));
         Label convertFrom = new Label("Convert From");
-        convertFrom.setFont(Font.font("Helvetica",16));
+        convertFrom.setFont(Font.font("Helvetica",15));
         Label convertTo = new Label("Convert To");
-        convertTo.setFont(Font.font("Helvetica",16));
+        convertTo.setFont(Font.font("Helvetica",15));
 
         TextField textFieldForValue = new TextField();
 
@@ -105,13 +105,13 @@ public class LayoutPane
             String conTo = cboForConvertTo.getValue();
             switch (conFrom)
             {
-                case "Celsius (°C)": result.setText("Result :"+converter.celsiusConversion(conTo,unit));
+                case "Celsius (°C)": result.setText("Result : "+converter.celsiusConversion(conTo,unit));
                 break;
-                case "Fahrenheit (°F)": result.setText("Result "+converter.fahrenheitConversion(conTo,unit));
+                case "Fahrenheit (°F)": result.setText("Result : "+converter.fahrenheitConversion(conTo,unit));
                 break;
-                case "Kelvin (K)": result.setText("Result "+converter.kelvinConversion(conTo,unit));
+                case "Kelvin (K)": result.setText("Result : "+converter.kelvinConversion(conTo,unit));
                 break;
-                case "Rankine (°R)": result.setText("Result "+converter.rankineConversion(conTo,unit));
+                case "Rankine (°R)": result.setText("Result : "+converter.rankineConversion(conTo,unit));
                 break;
                 default: throw new IllegalStateException("Unexpected value: " + convertTo);
             }

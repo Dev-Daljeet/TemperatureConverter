@@ -12,7 +12,7 @@ public class Converter
     private Converter()
     {
         result = null;
-        convertedUnit = 0;
+        convertedUnit = 0.0;
     }
 
     public static Converter getInstance()
@@ -51,7 +51,7 @@ public class Converter
             result = decimalFormat.format(unit) + " °C = " + decimalFormat.format(convertedUnit) + " °F";
             break;
             case "Kelvin (K)": convertedUnit = unit+273.15;
-            result = decimalFormat.format(unit) + " °C = " + decimalFormat.format(convertedUnit) + " k";
+            result = decimalFormat.format(unit) + " °C = " + decimalFormat.format(convertedUnit) + " K";
             break;
             case "Rankine (°R)": convertedUnit = unit*9/5+491.67;
             result = decimalFormat.format(unit) + " °C = " + decimalFormat.format(convertedUnit) + " °R";
@@ -73,7 +73,7 @@ public class Converter
                 result = decimalFormat.format(unit) + " °F = " + decimalFormat.format(convertedUnit) + " °F";
                 break;
             case "Kelvin (K)": convertedUnit = (unit+459.67)*5/9;
-                result = decimalFormat.format(unit) + " °F = " + decimalFormat.format(convertedUnit) + " k";
+                result = decimalFormat.format(unit) + " °F = " + decimalFormat.format(convertedUnit) + " K";
                 break;
             case "Rankine (°R)": convertedUnit = unit+459.67;
                 result = decimalFormat.format(unit) + " °F = " + decimalFormat.format(convertedUnit) + " °R";
@@ -95,7 +95,7 @@ public class Converter
                 result = decimalFormat.format(unit) + " K = "+ decimalFormat.format(convertedUnit) +" °F";
                 break;
             case "Kelvin (K)": convertedUnit = unit;
-                result = decimalFormat.format(unit) + " K = "+ decimalFormat.format(convertedUnit) + " k";
+                result = decimalFormat.format(unit) + " K = "+ decimalFormat.format(convertedUnit) + " K";
                 break;
             case "Rankine (°R)": convertedUnit = unit*9/5;
                 result = decimalFormat.format(unit) + " K = "+ decimalFormat.format(convertedUnit) + " °R";
@@ -119,7 +119,7 @@ public class Converter
                 break;
             case "Kelvin (K)":
                 convertedUnit = unit * 5 / 9;
-                result = decimalFormat.format(unit) + " °R = " + decimalFormat.format(convertedUnit) + " k";
+                result = decimalFormat.format(unit) + " °R = " + decimalFormat.format(convertedUnit) + " K";
                 break;
             case "Rankine (°R)":
                 convertedUnit = unit;
