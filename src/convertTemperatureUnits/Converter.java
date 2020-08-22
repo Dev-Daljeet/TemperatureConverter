@@ -4,11 +4,44 @@ import java.text.DecimalFormat;
 
 public class Converter
 {
+    private String result;
+    private double convertedUnit;
     private DecimalFormat decimalFormat = new DecimalFormat("#####.###");
+    private static Converter onlyConverter = null;
+
+    private Converter()
+    {
+        result = null;
+        convertedUnit = 0;
+    }
+
+    public static Converter getInstance()
+    {
+        if(onlyConverter == null)
+        {
+            onlyConverter = new Converter();
+        }
+        return onlyConverter;
+    }
+
+    public String getResult() {
+        return result;
+    }
+
+    public void setResult(String result) {
+        this.result = result;
+    }
+
+    public double getConvertedUnit() {
+        return convertedUnit;
+    }
+
+    public void setConvertedUnit(double convertedUnit) {
+        this.convertedUnit = convertedUnit;
+    }
+
     public String celsiusConversion(String convertTo, double unit)
     {
-        String result;
-        double convertedUnit;
         switch(convertTo)
         {
             case "Celsius (°C)": convertedUnit = unit;
@@ -31,8 +64,6 @@ public class Converter
 
     public String fahrenheitConversion(String convertTo, double unit)
     {
-        String result;
-        double convertedUnit;
         switch(convertTo)
         {
             case "Celsius (°C)": convertedUnit = (unit-32)*5/9;
@@ -55,8 +86,6 @@ public class Converter
 
     public String kelvinConversion(String convertTo, double unit)
     {
-        String result;
-        double convertedUnit;
         switch(convertTo)
         {
             case "Celsius (°C)": convertedUnit = unit-273.15;
@@ -77,9 +106,8 @@ public class Converter
         return result;
     }
 
-    public String rankineConversion(String convertTo, double unit) {
-        String result;
-        double convertedUnit;
+    public String rankineConversion(String convertTo, double unit)
+    {
         switch (convertTo) {
             case "Celsius (°C)":
                 convertedUnit = unit * 5 / 9 - 273.15;
