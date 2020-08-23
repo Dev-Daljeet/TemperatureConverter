@@ -1,6 +1,6 @@
 package main.java.convertTemperatureUnits;
 
-import main.java.convertTemperatureUnits.Converter;
+import convertTemperatureUnits.Converter;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -18,7 +18,7 @@ class ConverterTest {
 
     @Test
     public void celsiusUnitsShouldBeConverted() {
-        System.out.println("celsiusUnitsShouldbeConverted");
+        System.out.println("celsiusUnitsShouldBeConverted");
 
         Converter onlyInstance = Converter.getInstance();
 

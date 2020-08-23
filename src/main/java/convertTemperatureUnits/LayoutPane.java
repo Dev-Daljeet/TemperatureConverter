@@ -1,4 +1,4 @@
-package main.java.convertTemperatureUnits;
+package convertTemperatureUnits;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
