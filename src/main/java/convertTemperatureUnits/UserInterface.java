@@ -1,4 +1,4 @@
-package convertTemperatureUnits;
+package main.java.convertTemperatureUnits;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
