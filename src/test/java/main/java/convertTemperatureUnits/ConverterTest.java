@@ -5,8 +5,14 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/** Tests the methods (units) of class Converter.
+ * @author Daljeet Singh (Dev-Daljeey)
+ * @version 1.0
+ */
 class ConverterTest {
 
+    /** Test passes if instance of class Converter is created using getInstance() method.
+     */
     @Test
     public void onlyInstanceShouldBeCreated() {
         System.out.println("onlyInstanceShouldBeCreated");
@@ -16,6 +22,11 @@ class ConverterTest {
         assertEquals(expResult,result);
     }
 
+    /** Test passes if all the values returned from celsiusConversion() after conversion are accurate or true.
+     *  The four units which are passed by value to method are: one positive integer, one positive integer with 3 precision
+     *  points, one negative integer and one negative integer with 2 precision points. All units are hard coded and passed in
+     *  random order.
+     */
     @Test
     public void celsiusUnitsShouldBeConverted() {
         System.out.println("celsiusUnitsShouldBeConverted");
@@ -39,6 +50,11 @@ class ConverterTest {
         assertEquals(expResultRan,resultRan);
     }
 
+    /** Test passes if all the values returned from fahrenheitConversion() after conversion are accurate or true.
+     *  The four units which are passed by value to method are: one positive integer, one positive integer with 2 precision
+     *  points, one negative integer and one negative integer with 3 precision points. All units are hard coded and passed in
+     *  random order.
+     */
     @Test
     public void fahrenheitUnitsShouldBeConverted() {
         System.out.println("fahrenheitUnitsShouldBeConverted");
@@ -62,6 +78,11 @@ class ConverterTest {
         assertEquals(expResultRan,resultRan);
     }
 
+    /** Test passes if all the values returned from kelvinConversion() after conversion are accurate or true.
+     *  The four units which are passed by value to method are: one positive integer, one positive integer with 2 precision
+     *  points, one negative integer and one negative integer with 3 precision points. All units are hard coded and passed in
+     *  random order.
+     */
     @Test
     public void kelvinUnitsShouldBeConverted() {
         System.out.println("kelvinUnitsShouldBeConverted");
@@ -85,6 +106,11 @@ class ConverterTest {
         assertEquals(expResultRan,resultRan);
     }
 
+    /** Test passes if all the values returned from rankineConversion() after conversion are accurate or true.
+     *  The four units which are passed by value to method are: one positive integer, one positive integer with 3 precision
+     *  points, one negative integer and one negative integer with 2 precision points. All units are hard coded and passed in
+     *  random order.
+     */
     @Test
     public void rankineUnitsShouldBeConverted() {
         System.out.println("rankineUnitsShouldBeConverted");
