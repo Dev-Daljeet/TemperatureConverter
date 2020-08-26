@@ -6,7 +6,7 @@ Programming language: Java
 GUI: JavaFx
 
 ## A sample screenshot
-![Img](https://mega.nz/file/ut0FUKyQ#VU0Rg-PtqBNSXb4daqFgDUloA9C9XxkiiSswZNNsKmw)
+![Img](https://drive.google.com/file/d/1GMC8wQpy8lGOxmWmbd7_n3x1LLywl13a/view?usp=sharing)
 
 # Run:
 ## Prerequisites: 
