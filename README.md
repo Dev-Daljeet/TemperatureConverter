@@ -2,35 +2,66 @@
 > A converter for temperature degrees conversions of Fahrenheit (°F), Celsius (°C), Kelvin (K) and Rankine (°R).
 
 This project converts one temperature units like celsius to another temperature units like fahrenheit. It can convert four temperature units: Fahrenheit (°F), Celsius (°C), Kelvin (K) and Rankine (°R).
+
 Programming language: Java
+
 GUI: JavaFx
 
-## A sample screenshot
-![Img](https://drive.google.com/file/d/1GMC8wQpy8lGOxmWmbd7_n3x1LLywl13a/view?usp=sharing)
+location of Java classes: src\main\java\convertTemperatureUnits
 
-# Run:
-## Prerequisites: 
-* Oracle JDK 8 or equivalent JDK (recommended Java SE version 14.0.2 or latest release) 
-* Gluon JavaFx (recommended JavaFx version 14.0.2.1 or latest release) 
+location of Test classes: src\test\java\main\java\convertTemperatureUnits
+
+## A sample screenshot
+![Screesnhot of GUI](Screenshots\Screenshot(GUI).jpg)
+
+## Run:
+### Prerequisites: 
+* Oracle JDK 8 or equivalent JDK installed (recommended Java SE version 14.0.2 or latest release) 
+* Gluon JavaFx installed (recommended JavaFx version 14.0.2.1 or latest release) 
 * (optional) any Java IDE (recommened IntelliJ IDEA Version: 2020.2.1 or latest release)
 
-## :
+### Using IDE:
 
-# Usage example:
-## example 1:
+Step 1: Download the zip of the project or clone the project with HTTPS.
+
+Step 2: Open the project in IDE. For zip, unzip the project or import the project into IDE.
+
+Step 3: Go to src\main\java\convertTemperatureUnits and compile and run the class UserInterface.
+
+Step 4: Enter any value (double value) in input field. Then, choose units for convert from and convert to. Lastly, click on convert button. Result will be displayed on bottom text area.
+
+
+### Using command line:
+
+Step 1: Download the zip of the project or clone the project with HTTPS.
+
+Step 2: navigate to src\main\java\convertTemperatureUnits directory.
+
+Step 3: Execute the following command to compile the UserInterface.java file.
+        
+        javac -d . UserInterface.java
+        
+Step 4: To run the program, execute the following command.
+
+        java  UserInterface
+
+
+
+## Usage example:
+### example 1:
 Convert 22.4 °C to fahrenheit (°F).
 
-![ImgConv1](https://mega.nz/file/OttHAI5A#7olQ03QggRGc_irQRob-HZYeDXeQbDyS6Gb1ugQ0JGQ)
+![Screesnhot of conversion 1](Screenshots\convert1.jpg)
 
-## example 2:
+### example 2:
 Convert -3.4 °R to Kelvin (K).
 
-![ImgConv2](https://mega.nz/file/agtnBa7J#1cqu55kokql0Cmj2oUjou0Doh3t1nKxlQkqfIyTvE60)
+![Screesnhot of conversion 2](Screenshots\convert2.jpg)
 
-## example 3: 
+### example 3: 
 Clear the input field and result.
 
-![ImgClear](https://mega.nz/file/H01llSaa#1ZLZRC-aTKDoekOBz24dbDGo8C2UgUotNdIKL6Cs5z0)
+![Screesnhot of clear](Screenshots\clear.jpg)
 
 # License
 MIT License
