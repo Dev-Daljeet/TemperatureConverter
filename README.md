@@ -7,9 +7,9 @@ Programming language: Java
 
 GUI: JavaFx
 
-Location of Java classes: src\main\java\convertTemperatureUnits
+Location of Java classes: src\main\java\com\mycompany\converttemperatureunits
 
-Location of Test classes: src\test\java\main\java\convertTemperatureUnits
+Location of Test classes: src\test\java\com\mycompany\converttemperatureunits
 
 Location of JUnit 5 libraries: lib
 
@@ -32,7 +32,7 @@ Step 1: Download the zip of the project or clone the project with HTTPS.
 
 Step 2: Open the project in IDE. For zip file, unzip the project or import the project into IDE.
 
-Step 3: Go to src\main\java\convertTemperatureUnits and compile and run the class UserInterface.
+Step 3: Go to src\main\java\com.mycompany.convertTemperatureUnits and compile and run the class UserInterface.
 
 Step 4: Enter any value (double value) in input field. Then, choose units for convert from and convert to. Lastly, click on convert button. Result will be displayed in text area at bottom of GUI.
 
@@ -41,7 +41,7 @@ Step 4: Enter any value (double value) in input field. Then, choose units for co
 
 Step 1: Download the zip of the project or clone the project with HTTPS.
 
-Step 2: For zip file, unzip the project. Navigate to src\main\java\convertTemperatureUnits directory. 
+Step 2: For zip file, unzip the project. Navigate to src\main\java\com.mycompany.convertTemperatureUnits directory. 
 
 Step 3: Execute the following command to compile the UserInterface.java file.
         

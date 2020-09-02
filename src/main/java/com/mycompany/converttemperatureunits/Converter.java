@@ -1,4 +1,4 @@
-package convertTemperatureUnits;
+package com.mycompany.converttemperatureunits;
 
 import java.text.DecimalFormat;
 

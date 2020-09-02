@@ -1,10 +1,10 @@
-package convertTemperatureUnits;
+package com.mycompany.converttemperatureunits;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-/** Represents the User Interface and interacts with users to get input and display result.
+/** Represents the User Interface of an application.
  * @author Daljeet Singh (Dev-Daljeet)
  * @version 1.0
  */
