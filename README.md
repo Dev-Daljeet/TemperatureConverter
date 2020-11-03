@@ -26,6 +26,8 @@ Location of JUnit 5 libraries: lib
 
 Refer to this [link](https://www.tutorialspoint.com/javafx/javafx_environment.htm) for installation of Oracle JDK and setting up the path for windows.
 
+**Note: This is a normal Java project (not a maven project).**
+
 ### Using IDE:
 
 Step 1: Download the zip of the project or clone the project with HTTPS.
